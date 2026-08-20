@@ -1,0 +1,41 @@
+import { TestimonialItem } from "@/types";
+
+/**
+ * Testimonial Configuration
+ * Note: Marked as placeholders per AGENTS.md rule 13 until real client reviews are supplied.
+ */
+export const testimonialsData: TestimonialItem[] = [
+  {
+    id: "testimonial-1",
+    name: "Partner Review (Placeholder)",
+    role: "Managing Director",
+    company: "Hyderabad Realty Group",
+    location: "Hyderabad",
+    quote:
+      "AdPulse Media transformed our digital lead generation. Their drone walkthroughs and targeted Meta campaigns helped us generate qualified site visits for our villa project in record time.",
+    rating: 5,
+    isPlaceholder: true,
+  },
+  {
+    id: "testimonial-2",
+    name: "Client Feedback (Placeholder)",
+    role: "Head of Marketing",
+    company: "Commercial Infrastructure Ltd",
+    location: "Hyderabad",
+    quote:
+      "The new Next.js website delivered by AdPulse is lightning fast. Our inbound B2B tenders and corporate enquiries increased significantly within the first month of launch.",
+    rating: 5,
+    isPlaceholder: true,
+  },
+  {
+    id: "testimonial-3",
+    name: "Founder Review (Placeholder)",
+    role: "Founder & CEO",
+    company: "Healthcare Solutions",
+    location: "Telangana",
+    quote:
+      "Professional team with unmatched responsiveness. They understand the Hyderabad market dynamics and local audience behavior better than generic agencies.",
+    rating: 5,
+    isPlaceholder: true,
+  },
+];

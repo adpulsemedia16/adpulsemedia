@@ -1,0 +1,98 @@
+import { PortfolioProject } from "@/types";
+
+export const portfolioCategories = [
+  { id: "all", label: "All Projects" },
+  { id: "real-estate", label: "Real Estate" },
+  { id: "construction", label: "Construction" },
+  { id: "websites", label: "Websites" },
+  { id: "social-media", label: "Social Media & Ads" },
+  { id: "video", label: "Video & Drone" },
+  { id: "branding", label: "Branding" },
+];
+
+export const portfolioProjects: PortfolioProject[] = [
+  {
+    id: "luxury-villa-gated-community",
+    title: "Luxury Villa Gated Community Campaign",
+    client: "Premium Real Estate Developer, Hyderabad (Sample Showcase)",
+    category: "real-estate",
+    services: ["Meta Lead Generation", "Drone Videography", "Landing Page"],
+    thumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&auto=format&fit=crop&q=80",
+    shortDescription:
+      "Full-funnel digital campaign targeting NRI & HNI homebuyers across Hyderabad with cinematic drone walkthroughs and targeted Instagram Instant Forms.",
+    resultMetric: "420+ Leads",
+    resultLabel: "CPL reduced by 34% (Verified Sample)",
+    isPlaceholder: true,
+    slug: "luxury-villa-campaign",
+  },
+  {
+    id: "open-plots-venture",
+    title: "Highway Open Plots Venture Launch",
+    client: "Land Developers, Telangana (Sample Showcase)",
+    category: "real-estate",
+    services: ["Google Ads", "Meta Ads", "Brochure Design"],
+    thumbnail: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80",
+    shortDescription:
+      "Geo-targeted Google search and social ad funnel for a 45-acre plotted development, generating high-intent site visit bookings.",
+    resultMetric: "180+ Site Visits",
+    resultLabel: "Within 45 days of launch",
+    isPlaceholder: true,
+    slug: "open-plots-venture",
+  },
+  {
+    id: "construction-infra-corporate-site",
+    title: "Commercial Construction & Infrastructure Portal",
+    client: "EPC & Civil Construction Firm (Sample Showcase)",
+    category: "websites",
+    services: ["Next.js Website", "SEO Optimization", "Corporate Video"],
+    thumbnail: "https://images.unsplash.com/photo-1541888946425-d0fbb18015f5?w=800&auto=format&fit=crop&q=80",
+    shortDescription:
+      "High-performance responsive portal showcasing completed commercial projects, equipment fleet, and tenders with zero layout shift.",
+    resultMetric: "99 / 100",
+    resultLabel: "Lighthouse Performance Score",
+    isPlaceholder: true,
+    slug: "construction-infra-portal",
+  },
+  {
+    id: "realty-brand-identity",
+    title: "Luxury Real Estate Identity & Collateral Suite",
+    client: "Boutique Realty Brand, Hyderabad (Sample Showcase)",
+    category: "branding",
+    services: ["Logo Design", "Brand Guidelines", "Sales Collaterals"],
+    thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=80",
+    shortDescription:
+      "Comprehensive luxury identity including gold foil print brochures, site hoardings, sales gallery signage, and digital asset kit.",
+    resultMetric: "Full Kit",
+    resultLabel: "Delivered in 12 days",
+    isPlaceholder: true,
+    slug: "realty-brand-identity",
+  },
+  {
+    id: "drone-walkthrough-highrise",
+    title: "4K Aerial & Clubhouse Walkthrough Film",
+    client: "High-Rise Tower Developer, Gachibowli (Sample Showcase)",
+    category: "video",
+    services: ["4K Drone Shoot", "Interior Gimbal Video", "Reel Cuts"],
+    thumbnail: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop&q=80",
+    shortDescription:
+      "High-production video tour featuring 4K aerial shots of surrounding IT corridor connectivity and interior amenities.",
+    resultMetric: "125K+ Views",
+    resultLabel: "Organic Instagram Reach",
+    isPlaceholder: true,
+    slug: "drone-highrise-film",
+  },
+  {
+    id: "local-healthcare-growth",
+    title: "Multi-Speciality Healthcare Lead Generation",
+    client: "Healthcare Group, Hyderabad (Sample Showcase)",
+    category: "social-media",
+    services: ["Meta Lead Ads", "Doctor Video Reels", "Local SEO"],
+    thumbnail: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80",
+    shortDescription:
+      "Patient appointment lead engine leveraging educational short-form reels and hyper-local Hyderabad search ads.",
+    resultMetric: "310+ Appointments",
+    resultLabel: "Monthly booking run rate",
+    isPlaceholder: true,
+    slug: "healthcare-lead-engine",
+  },
+];
