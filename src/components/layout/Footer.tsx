@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Col 1 & 2: Agency Identity & Mission */}
           <div className="lg:col-span-2 space-y-5">
-            <Link href="/" className="flex items-center gap-2 group inline-block">
+            <Link href="/" className="inline-flex items-center gap-2 group">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-navy via-brand-plum to-brand-magenta flex items-center justify-center border border-white/20 shadow-brand-sm">
                 <svg
                   className="w-6 h-6 text-brand-pink"

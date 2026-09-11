@@ -21,8 +21,8 @@ export const ServiceGrid: React.FC<ServiceGridProps> = ({ showHeading = true }) 
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {servicesData.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+          {servicesData.map((service, index) => (
+            <ServiceCard key={service.id} service={service} index={index} />
           ))}
         </div>
       </div>

@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { businessMetrics } from "@/content/site";
 import { Award, Users, TrendingUp, Clock } from "lucide-react";
 
@@ -9,6 +12,20 @@ const metricIcons: Record<string, React.ReactNode> = {
   turnaround: <Clock className="w-6 h-6 text-brand-pink" />,
 };
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 16, scale: 0.97 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      delay: i * 0.05,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  }),
+};
+
 export const StatsSection: React.FC = () => {
   return (
     <section className="py-16 bg-brand-purpleDark border-y border-white/10 relative overflow-hidden" aria-label="Performance Metrics">
@@ -17,9 +34,14 @@ export const StatsSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {businessMetrics.map((stat) => (
-            <div
+          {businessMetrics.map((stat, index) => (
+            <motion.div
               key={stat.id}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-40px" }}
+              custom={index}
               className="p-6 rounded-2xl bg-brand-navy/60 border border-white/10 backdrop-blur-sm text-center flex flex-col items-center justify-center group hover:border-brand-magenta/40 transition-colors"
             >
               <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -34,7 +56,7 @@ export const StatsSection: React.FC = () => {
               <p className="mt-2 text-xs text-gray-400 max-w-[220px]">
                 {stat.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

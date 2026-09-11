@@ -33,10 +33,11 @@ export interface ServiceGroup {
 export interface PortfolioProject {
   id: string;
   title: string;
-  client: string; // e.g. "Residential Developer, Hyderabad (Placeholder)"
+  client: string;
   category: "real-estate" | "construction" | "websites" | "social-media" | "branding" | "video";
   services: string[];
   thumbnail: string;
+  videoUrl?: string | null;
   shortDescription: string;
   resultMetric?: string;
   resultLabel?: string;
@@ -52,7 +53,7 @@ export interface TestimonialItem {
   location: string;
   quote: string;
   rating: number;
-  avatarUrl?: string;
+  avatarUrl?: string | null;
   isPlaceholder: boolean;
 }
 

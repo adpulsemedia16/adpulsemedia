@@ -89,7 +89,7 @@ export const Header: React.FC = () => {
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 onClick={() => trackEvent("phone_click", { source: "header_desktop" })}
-                className="text-gray-300 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-colors"
+                className="text-gray-300 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-colors duration-150"
                 title="Call AdPulse Media"
               >
                 <Phone className="w-3.5 h-3.5 text-brand-magenta" />
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={() => trackEvent("consultation_cta_click", { source: "header_button" })}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-magenta to-brand-pink text-white text-sm font-bold shadow-brand-sm hover:shadow-brand-md hover:scale-[1.02] active:scale-[0.98] transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-magenta to-brand-pink text-white text-sm font-bold shadow-brand-sm hover:shadow-brand-md active:scale-[0.97] transition-all duration-150"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Get Free Consultation</span>
@@ -111,7 +111,7 @@ export const Header: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={() => trackEvent("consultation_cta_click", { source: "header_mobile_cta" })}
-                className="px-3 py-1.5 rounded-lg bg-brand-magenta text-white text-xs font-bold shadow-brand-sm"
+                className="px-3 py-1.5 rounded-lg bg-brand-magenta text-white text-xs font-bold shadow-brand-sm active:scale-[0.97] transition-transform duration-150"
               >
                 Consult
               </Link>
@@ -119,8 +119,10 @@ export const Header: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 rounded-xl text-gray-200 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-magenta"
+                className="p-2 rounded-xl text-gray-200 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 focus:outline-none focus:ring-2 focus:ring-brand-magenta active:scale-[0.97] transition-all duration-150"
                 aria-label="Open main menu"
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-navigation-drawer"
               >
                 <Menu className="w-6 h-6" />
               </button>

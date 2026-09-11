@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ServiceGroup } from "@/types";
 import {
   TrendingUp,
@@ -12,6 +15,7 @@ import {
 
 interface ServiceCardProps {
   service: ServiceGroup;
+  index?: number;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -21,9 +25,29 @@ const iconMap: Record<string, React.ReactNode> = {
   Sparkles: <Sparkles className="w-7 h-7 text-brand-pink" />,
 };
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      delay: i * 0.06,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  }),
+};
+
+export const ServiceCard: React.FC<ServiceCardProps> = ({ service, index = 0 }) => {
   return (
-    <div className="group relative rounded-3xl bg-brand-purpleDark/60 border border-white/10 hover:border-brand-magenta/50 p-8 transition-all duration-300 hover:shadow-brand-md flex flex-col justify-between overflow-hidden">
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-40px" }}
+      custom={index}
+      className="group relative rounded-3xl bg-brand-purpleDark/60 border border-white/10 hover:border-brand-magenta/50 p-8 transition-all duration-300 hover:shadow-brand-md flex flex-col justify-between overflow-hidden"
+    >
       {/* Background Accent Glow on Hover */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-brand-magenta/10 rounded-full blur-2xl group-hover:bg-brand-magenta/25 transition-all duration-500 pointer-events-none" />
 
@@ -72,6 +96,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform text-brand-magenta" />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

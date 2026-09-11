@@ -81,7 +81,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ project }) => {
       <div className="p-6 pt-0 border-t border-white/5 mt-4">
         <Link
           href="/contact"
-          className="w-full mt-4 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-brand-magenta hover:text-white border border-white/10 text-xs font-bold text-gray-200 transition-all flex items-center justify-center gap-1.5"
+          className="w-full mt-4 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-brand-magenta hover:text-white border border-white/10 text-xs font-bold text-gray-200 active:scale-[0.97] transition-all duration-150 flex items-center justify-center gap-1.5"
         >
           <span>Enquire Similar Strategy</span>
           <ArrowUpRight className="w-4 h-4" />

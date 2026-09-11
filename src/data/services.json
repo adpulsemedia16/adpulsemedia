@@ -1,0 +1,170 @@
+[
+  {
+    "id": "digital-marketing",
+    "title": "Digital Marketing & Paid Ads",
+    "tagline": "Performance campaigns designed for high ROAS and predictable lead volume.",
+    "shortDescription": "Target high-intent customers in Hyderabad with laser-focused Meta and Google Ads, organic local SEO, and multi-channel retargeting.",
+    "iconName": "TrendingUp",
+    "slug": "digital-marketing",
+    "deliverables": [
+      "Meta Ads (Facebook & Instagram Lead Generation)",
+      "Google Search, Display & YouTube Performance Ads",
+      "Local SEO & Google Business Profile Ranking",
+      "High-Converting Retargeting & Custom Audiences"
+    ],
+    "subServices": [
+      {
+        "title": "Meta Lead Generation Ads",
+        "iconName": "Target",
+        "description": "Custom Instant Forms and landing page traffic funnels built specifically for Facebook & Instagram to capture high-intent buyers."
+      },
+      {
+        "title": "Google Search & YouTube Ads",
+        "iconName": "Search",
+        "description": "Capture high-intent searches when prospects in Hyderabad are actively looking for your property, product, or service."
+      },
+      {
+        "title": "Local SEO & Map Pack Optimization",
+        "iconName": "MapPin",
+        "description": "Dominate Hyderabad local search queries and rank in Google's Top 3 Map Pack for high-value transactional keywords."
+      },
+      {
+        "title": "Social Media Management",
+        "iconName": "Share2",
+        "description": "Engaging monthly content calendars, viral reels, carousel designs, and community management that build brand authority."
+      }
+    ],
+    "benefits": [
+      "Lower Cost Per Qualified Lead (CPL)",
+      "Laser-targeted geographic & demographic filtering",
+      "Weekly transparent ROI and conversion reporting",
+      "Continuous A/B testing of ad hooks and creatives"
+    ]
+  },
+  {
+    "id": "website-development",
+    "title": "High-Converting Website Development",
+    "tagline": "Modern, blazing-fast, mobile-first websites engineered to turn visitors into paying leads.",
+    "shortDescription": "Custom business websites, real estate project landing pages, and corporate portals optimized for speed, SEO, and WhatsApp conversion.",
+    "iconName": "Layout",
+    "slug": "website-development",
+    "deliverables": [
+      "Real Estate & Property Landing Pages",
+      "Corporate & Business Websites",
+      "E-Commerce & Service Portals",
+      "Speed, Mobile & Core Web Vitals Optimization"
+    ],
+    "subServices": [
+      {
+        "title": "Real Estate Landing Pages",
+        "iconName": "Home",
+        "description": "High-impact single-project pages with interactive floor plans, amenity galleries, location maps, and brochure downloads."
+      },
+      {
+        "title": "Corporate & Agency Websites",
+        "iconName": "Briefcase",
+        "description": "Professional corporate websites that establish instant credibility, showcase your portfolio, and drive inbound sales calls."
+      },
+      {
+        "title": "E-Commerce & Product Catalogs",
+        "iconName": "ShoppingBag",
+        "description": "Secure, smooth online storefronts with seamless payment gateways, inventory sync, and WhatsApp checkout options."
+      },
+      {
+        "title": "Website Maintenance & Speed Optimization",
+        "iconName": "Zap",
+        "description": "Ongoing security updates, SSL certificates, daily backups, and Core Web Vitals performance tuning."
+      }
+    ],
+    "benefits": [
+      "Sub-second load times for maximum ad conversion",
+      "Integrated WhatsApp chat and instant lead capture forms",
+      "Clean semantic code structure for superior Google indexing",
+      "Responsive across all mobile screen sizes (360px – 4K)"
+    ]
+  },
+  {
+    "id": "content-production",
+    "title": "Content & Video Production",
+    "tagline": "Cinematic drone footage, property walkthroughs, and viral short-form video reels.",
+    "shortDescription": "Capture attention and showcase project scale with professional on-location filming, licensed drone videography, and polished post-production.",
+    "iconName": "Video",
+    "slug": "content-production",
+    "deliverables": [
+      "4K Drone & Aerial Property Shoots",
+      "Architectural & Interior Walkthrough Videos",
+      "Instagram Reels & YouTube Shorts Production",
+      "Corporate Brand Stories & Founder Interviews"
+    ],
+    "subServices": [
+      {
+        "title": "Drone Shoots & Aerial Mapping",
+        "iconName": "Compass",
+        "description": "Stunning 4K aerial perspectives showcasing project elevation, approach roads, surrounding infrastructure, and layout boundaries."
+      },
+      {
+        "title": "Property Walkthroughs",
+        "iconName": "Camera",
+        "description": "Smooth gimbal-stabilized interior and exterior walkthroughs highlighting luxury finishes, clubhouse amenities, and spatial design."
+      },
+      {
+        "title": "Viral Social Media Reels",
+        "iconName": "Film",
+        "description": "Fast-paced, hook-driven short-form reels with custom captions, sound effects, and animations that stop the scroll."
+      },
+      {
+        "title": "Site Progress & Corporate Shoots",
+        "iconName": "Activity",
+        "description": "Document construction milestones and corporate capabilities for investor updates and quarterly stakeholder presentations."
+      }
+    ],
+    "benefits": [
+      "Showcase open plots, villas, and high-rise developments with grandeur",
+      "Engage social media audiences with high-retention reel editing",
+      "Full turnkey service: scripting, on-site filming, and sound design",
+      "Optimized export formats for Meta Ads, YouTube, and WhatsApp sharing"
+    ]
+  },
+  {
+    "id": "branding",
+    "title": "Brand Identity & Design",
+    "tagline": "Distinctive brand identities that build long-term trust and command premium pricing.",
+    "shortDescription": "Craft a memorable identity with bespoke logo design, brand guidelines, brochure collaterals, and high-impact social media creatives.",
+    "iconName": "Sparkles",
+    "slug": "branding",
+    "deliverables": [
+      "Logo Design & Comprehensive Brand Guidelines",
+      "Brochures, Hoardings & Print Marketing Collaterals",
+      "Social Media Ad Creatives & Brand Kits",
+      "Corporate Stationery & Presentation Decks"
+    ],
+    "subServices": [
+      {
+        "title": "Logo & Visual Identity",
+        "iconName": "Feather",
+        "description": "Distinctive brand marks, color palettes, and typography guidelines tailored to your industry positioning."
+      },
+      {
+        "title": "Marketing Brochures & Collaterals",
+        "iconName": "BookOpen",
+        "description": "Sales brochures, one-pagers, project catalogues, and physical hoardings that impress buyers on-site."
+      },
+      {
+        "title": "Ad Creatives & Social Kits",
+        "iconName": "Layers",
+        "description": "High-converting ad banners, Instagram templates, and banner sets designed specifically for click-through rate."
+      },
+      {
+        "title": "Packaging & Corporate Decks",
+        "iconName": "FileText",
+        "description": "Polished pitch decks, business cards, letterheads, and corporate presentation packages."
+      }
+    ],
+    "benefits": [
+      "Consistent visual identity across all online and offline touchpoints",
+      "Stand out against competitors with bespoke typography and color palettes",
+      "Print-ready vectors and digital-ready asset kits delivered",
+      "Fast turnaround times with collaborative revision cycles"
+    ]
+  }
+]

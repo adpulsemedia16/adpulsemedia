@@ -2,9 +2,39 @@
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { siteConfig } from "@/content/site";
 import { ArrowRight, CheckCircle2, TrendingUp, Play, Zap, ShieldCheck } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+
+/**
+ * Shared animation variants.
+ * All animations respect prefers-reduced-motion via framer-motion's built-in support.
+ */
+const fadeInUp = {
+  hidden: { opacity: 0, y: 16 },
+  visible: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.45,
+      delay,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  }),
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: (delay: number) => ({
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      delay,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  }),
+};
 
 export const HeroSection: React.FC = () => {
   return (
@@ -26,69 +56,111 @@ export const HeroSection: React.FC = () => {
           <div className="lg:col-span-7 text-center lg:text-left">
             
             {/* Top Eyebrow Tag */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold mb-6 shadow-inner animate-pulse-subtle">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              custom={0}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold mb-6 shadow-inner animate-pulse-subtle"
+            >
               <span className="w-2 h-2 rounded-full bg-brand-pink animate-ping" />
-              <span>Hyderabad’s Dedicated Digital Growth & Lead Agency</span>
-            </div>
+              <span>Hyderabad&apos;s Dedicated Digital Growth &amp; Lead Agency</span>
+            </motion.div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]">
+            <motion.h1
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              custom={0.15}
+              className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]"
+            >
               Grow Your Business with{" "}
               <span className="bg-gradient-to-r from-white via-brand-pink to-brand-magenta bg-clip-text text-transparent">
                 AdPulse Media
               </span>
-            </h1>
+            </motion.h1>
 
             {/* Subheading */}
-            <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              Digital Marketing, Lead Generation, Website Development, Content Creation & Branding Solutions for Businesses, Real Estate & Construction Companies.
-            </p>
+            <motion.p
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              custom={0.3}
+              className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal"
+            >
+              Digital Marketing, Lead Generation, Website Development, Content Creation &amp; Branding Solutions for Businesses, Real Estate &amp; Construction Companies.
+            </motion.p>
 
             {/* Value Checkpoints */}
-            <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm text-gray-300">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              custom={0.45}
+              className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm text-gray-300"
+            >
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-brand-pink" />
                 <span>Verified Buyer Leads</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-brand-pink" />
-                <span>4K Drone & Video Shoots</span>
+                <span>4K Drone &amp; Video Shoots</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-brand-pink" />
                 <span>High-Speed Next.js Websites</span>
               </div>
-            </div>
+            </motion.div>
 
             {/* Primary & Secondary Call to Actions */}
-            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+              custom={0.6}
+              className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            >
               <Link
                 href="/contact"
                 onClick={() => trackEvent("consultation_cta_click", { source: "hero_primary" })}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-magenta to-brand-pink text-white font-bold text-base shadow-brand-md hover:shadow-brand-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 group"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-magenta to-brand-pink text-white font-bold text-base shadow-brand-md hover:shadow-brand-lg active:scale-[0.97] transition-all duration-150 flex items-center justify-center gap-2 group"
               >
                 <span>Get Free Consultation</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-150" />
               </Link>
 
               <Link
                 href="/portfolio"
                 onClick={() => trackEvent("portfolio_view", { source: "hero_secondary" })}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-base transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-base active:scale-[0.97] transition-all duration-150 flex items-center justify-center gap-2"
               >
                 <span>View Portfolio</span>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Trust Quote / Guarantee */}
-            <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-center lg:justify-start gap-3 text-xs text-gray-400">
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              animate="visible"
+              custom={0.75}
+              className="mt-8 pt-6 border-t border-white/10 flex items-center justify-center lg:justify-start gap-3 text-xs text-gray-400"
+            >
               <ShieldCheck className="w-5 h-5 text-brand-pink shrink-0" />
-              <span>Tailored campaign strategies with zero lock-in contracts & transparent weekly metrics.</span>
-            </div>
+              <span>Tailored campaign strategies with zero lock-in contracts &amp; transparent weekly metrics.</span>
+            </motion.div>
           </div>
 
           {/* Right Column: Dynamic Agency Interactive Showcase Visual */}
-          <div className="lg:col-span-5 relative">
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            custom={0.4}
+            className="lg:col-span-5 relative"
+          >
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Outer Card with Glassmorphism */}
@@ -111,9 +183,9 @@ export const HeroSection: React.FC = () => {
                   {/* Lead Generation Card */}
                   <div className="p-4 rounded-2xl bg-brand-navy/80 border border-white/10 flex items-center justify-between">
                     <div>
-                      <div className="text-xs text-gray-400 font-medium">Meta & Google Ad Leads</div>
+                      <div className="text-xs text-gray-400 font-medium">Meta &amp; Google Ad Leads</div>
                       <div className="text-2xl font-black text-white mt-0.5">1,420+ <span className="text-xs text-green-400 font-semibold font-mono">↑ 48%</span></div>
-                      <div className="text-[11px] text-gray-400">Real Estate & B2B Campaigns</div>
+                      <div className="text-[11px] text-gray-400">Real Estate &amp; B2B Campaigns</div>
                     </div>
                     <div className="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center border border-brand-magenta/40">
                       <TrendingUp className="w-6 h-6 text-brand-pink" />
@@ -123,9 +195,9 @@ export const HeroSection: React.FC = () => {
                   {/* Drone Production Highlight */}
                   <div className="p-4 rounded-2xl bg-brand-navy/80 border border-white/10 flex items-center justify-between">
                     <div>
-                      <div className="text-xs text-gray-400 font-medium">Content & Video Engine</div>
+                      <div className="text-xs text-gray-400 font-medium">Content &amp; Video Engine</div>
                       <div className="text-lg font-bold text-white mt-0.5">4K Drone Walkthroughs</div>
-                      <div className="text-[11px] text-gray-400">Cinematic property reels & shoots</div>
+                      <div className="text-[11px] text-gray-400">Cinematic property reels &amp; shoots</div>
                     </div>
                     <div className="w-12 h-12 rounded-xl bg-brand-purpleDeep flex items-center justify-center border border-brand-pink/30">
                       <Play className="w-5 h-5 text-brand-pink fill-brand-pink" />
@@ -148,13 +220,13 @@ export const HeroSection: React.FC = () => {
                 {/* Floating Bottom Badge */}
                 <div className="mt-5 p-3 rounded-xl bg-gradient-to-r from-brand-magenta/20 to-brand-plum/40 border border-brand-magenta/30 text-center">
                   <span className="text-xs font-semibold text-brand-pink">
-                    ✨ Serving Builders, Pharma, Education & Startups in Hyderabad
+                    ✨ Serving Builders, Pharma, Education &amp; Startups in Hyderabad
                   </span>
                 </div>
               </div>
 
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

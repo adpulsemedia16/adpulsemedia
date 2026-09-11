@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/site";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-import { SkipToContent } from "@/components/layout/SkipToContent";
+import { Analytics } from "@/components/layout/Analytics";
 import { generateOrganizationSchema } from "@/lib/seo";
 
 const jakartaSans = Plus_Jakarta_Sans({
@@ -34,11 +31,7 @@ export const metadata: Metadata = {
   authors: [{ name: "AdPulse Media" }],
   creator: "AdPulse Media",
   publisher: "AdPulse Media",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  formatDetection: { email: false, address: false, telephone: false },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -83,14 +76,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col selection:bg-brand-magenta selection:text-white">
-        <SkipToContent />
-        <Header />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
+      <body className="min-h-screen selection:bg-brand-magenta selection:text-white">
+        {children}
+        <Analytics />
       </body>
     </html>
   );

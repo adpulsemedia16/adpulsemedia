@@ -25,7 +25,7 @@ export const WhatsAppButton: React.FC = () => {
     <aside aria-label="WhatsApp quick chat" className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2 pointer-events-none">
       {/* Interactive Tooltip Bubble */}
       {showTooltip && (
-        <div className="pointer-events-auto max-w-xs bg-white text-brand-dark p-3.5 rounded-2xl shadow-xl border border-gray-100 flex items-start gap-2.5 animate-in fade-in slide-in-from-bottom-2 duration-300">
+        <div className="pointer-events-auto max-w-xs bg-white text-brand-dark p-3.5 rounded-2xl shadow-xl border border-gray-100 flex items-start gap-2.5 animate-in fade-in slide-in-from-bottom-2 duration-200 origin-bottom-right">
           <div className="w-2 h-2 rounded-full bg-green-500 mt-1.5 shrink-0 animate-ping" />
           <div className="flex-1 text-xs">
             <p className="font-bold text-gray-900">Chat with AdPulse</p>
@@ -36,7 +36,7 @@ export const WhatsAppButton: React.FC = () => {
               setShowTooltip(false);
               setDismissed(true);
             }}
-            className="text-gray-400 hover:text-gray-600 p-0.5 rounded focus:outline-none"
+            className="text-gray-400 hover:text-gray-600 p-0.5 rounded focus:outline-none active:scale-[0.9] transition-transform duration-100"
             aria-label="Dismiss message"
           >
             <X className="w-3.5 h-3.5" />
@@ -50,7 +50,7 @@ export const WhatsAppButton: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackEvent("whatsapp_click", { source: "floating_button" })}
-        className="pointer-events-auto group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+        className="pointer-events-auto group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-2xl hover:scale-105 active:scale-[0.97] transition-all duration-150 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
         aria-label="Contact AdPulse Media on WhatsApp"
       >
         <MessageCircle className="w-7 h-7 fill-white/20 stroke-[2.2]" />

@@ -14,6 +14,7 @@ interface MobileNavProps {
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
   const pathname = usePathname();
+  const drawerRef = React.useRef<HTMLDivElement>(null);
 
   // Prevent background scrolling when menu is open
   useEffect(() => {
@@ -27,19 +28,61 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen]);
 
+  // Focus trap: constrain Tab navigation inside the drawer & close on Escape
+  useEffect(() => {
+    if (!isOpen || !drawerRef.current) return;
+
+    const drawer = drawerRef.current;
+    const focusableSelector =
+      'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    const focusableElements = drawer.querySelectorAll<HTMLElement>(focusableSelector);
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    // Auto-focus the close button when opened
+    firstFocusable?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+
+      if (e.key !== "Tab") return;
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable?.focus();
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable?.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-brand-navy/80 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-brand-navy/80 backdrop-blur-sm transition-opacity duration-200"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Drawer */}
       <div
+        ref={drawerRef}
+        id="mobile-navigation-drawer"
+        style={{ animationTimingFunction: "var(--ease-drawer)" }}
         className="fixed inset-y-0 right-0 w-full max-w-sm bg-brand-navy border-l border-white/10 p-6 flex flex-col justify-between shadow-2xl overflow-y-auto animate-in slide-in-from-right duration-300"
         role="dialog"
         aria-modal="true"
@@ -58,7 +101,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-magenta"
+              className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-brand-magenta active:scale-[0.9] transition-transform duration-100"
               aria-label="Close menu"
             >
               <X className="w-6 h-6" />
