@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   CheckCircle2,
 } from "lucide-react";
+import { pages } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Contact Us — Get Free Digital Marketing Consultation in Hyderabad",
@@ -49,14 +50,11 @@ export default function ContactPage() {
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                  Get in Touch with{" "}
-                  <span className="bg-gradient-to-r from-brand-pink to-brand-magenta bg-clip-text text-transparent">
-                    Our Growth Team
-                  </span>
+                  {pages.contact.hero.heading}
                 </h1>
 
                 <p className="mt-4 text-base text-gray-300 leading-relaxed">
-                  Have a new property launch, website redesign, or video shoot in mind? Fill out the form or reach us directly on WhatsApp for an immediate response.
+                  {pages.contact.hero.subheading}
                 </p>
               </div>
 

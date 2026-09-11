@@ -96,5 +96,33 @@
       "description": "From strategy and creative production to ad launch in record time."
     }
   ],
-  "industries": []
+  "industries": [],
+  "pages": {
+    "home": {
+      "hero": {
+        "heading": "Grow Your Business with AdPulse Media",
+        "subheading": "Digital Marketing, Lead Generation, Website Development, Content Creation & Branding Solutions for Businesses, Real Estate & Construction Companies."
+      },
+      "about": {
+        "heading": "About AdPulse Media",
+        "text": "We help businesses generate leads, build brand awareness, and increase sales through strategic digital marketing, creative content, and high-converting websites."
+      }
+    },
+    "about": {
+      "hero": {
+        "heading": "Driving Growth Through Digital Excellence",
+        "subheading": "We are Hyderabad's premier digital growth agency, dedicated to helping ambitious businesses scale their revenue and dominate their local markets."
+      },
+      "mission": {
+        "heading": "Our Mission",
+        "text": "To empower businesses with data-driven marketing, stunning creative assets, and high-performance websites that generate tangible ROI and long-term brand equity."
+      }
+    },
+    "contact": {
+      "hero": {
+        "heading": "Let's Build Your Digital Presence",
+        "subheading": "Ready to scale your business? Book a free consultation with our growth experts and discover how we can help you achieve your goals."
+      }
+    }
+  }
 }

@@ -12,6 +12,7 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { CTASection } from "@/components/sections/CTASection";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { faqsData } from "@/content/faqs";
+import { pages } from "@/content/site";
 import { generateFAQSchema } from "@/lib/seo";
 import {
   ArrowRight,
@@ -88,7 +89,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-brand-magenta/15 text-brand-pink text-xs font-bold uppercase tracking-wider border border-brand-magenta/30">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>About AdPulse Media</span>
+                <span>{pages.home.about.heading}</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
@@ -96,7 +97,7 @@ export default function HomePage() {
               </h2>
 
               <blockquote className="text-lg font-medium text-brand-pink italic border-l-2 border-brand-magenta pl-4">
-                &ldquo;We help businesses generate leads, build brand awareness, and increase sales through strategic digital marketing, creative content, and high-converting websites.&rdquo;
+                &ldquo;{pages.home.about.text}&rdquo;
               </blockquote>
 
               <p className="text-sm sm:text-base text-gray-300 leading-relaxed">

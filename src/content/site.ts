@@ -1,5 +1,5 @@
 import siteDataJson from '../data/site.json';
-import { NavItem, MetricStat, IndustryItem } from "@/types";
+import { NavItem, MetricStat, IndustryItem, PageContent } from "@/types";
 
 const siteData = siteDataJson as any;
 
@@ -18,3 +18,4 @@ export const siteConfig = siteData.siteConfig as {
 };
 export const businessMetrics: MetricStat[] = siteData.businessMetrics;
 export const industries: IndustryItem[] = siteData.industries;
+export const pages: PageContent = siteData.pages;

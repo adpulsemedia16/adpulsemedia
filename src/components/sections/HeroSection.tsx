@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { siteConfig } from "@/content/site";
+import { siteConfig, pages } from "@/content/site";
 import { ArrowRight, CheckCircle2, TrendingUp, Play, Zap, ShieldCheck } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
@@ -74,12 +74,13 @@ export const HeroSection: React.FC = () => {
               animate="visible"
               custom={0.15}
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12]"
-            >
-              Grow Your Business with{" "}
-              <span className="bg-gradient-to-r from-white via-brand-pink to-brand-magenta bg-clip-text text-transparent">
-                AdPulse Media
-              </span>
-            </motion.h1>
+              dangerouslySetInnerHTML={{
+                __html: pages.home.hero.heading.replace(
+                  "AdPulse Media",
+                  '<span class="bg-gradient-to-r from-white via-brand-pink to-brand-magenta bg-clip-text text-transparent">AdPulse Media</span>'
+                ),
+              }}
+            />
 
             {/* Subheading */}
             <motion.p
@@ -89,7 +90,7 @@ export const HeroSection: React.FC = () => {
               custom={0.3}
               className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal"
             >
-              Digital Marketing, Lead Generation, Website Development, Content Creation &amp; Branding Solutions for Businesses, Real Estate &amp; Construction Companies.
+              {pages.home.hero.subheading}
             </motion.p>
 
             {/* Value Checkpoints */}

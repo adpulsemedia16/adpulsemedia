@@ -16,6 +16,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import { pages } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "About Us — Full-Service Digital Marketing Agency in Hyderabad",
@@ -105,14 +106,11 @@ export default function AboutPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-              Empowering Businesses Across Hyderabad with{" "}
-              <span className="bg-gradient-to-r from-brand-pink to-brand-magenta bg-clip-text text-transparent">
-                Predictable Digital Growth
-              </span>
+              {pages.about.hero.heading}
             </h1>
 
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
-              AdPulse Media is a full-service digital marketing agency helping businesses grow through innovative marketing, professional content creation, and powerful websites.
+              {pages.about.hero.subheading}
             </p>
           </div>
         </div>
@@ -128,9 +126,9 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-xl bg-brand-magenta/20 flex items-center justify-center border border-brand-magenta/40 mb-6">
                 <Target className="w-6 h-6 text-brand-pink" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-3">Our Mission</h2>
+              <h2 className="text-2xl font-bold text-white mb-3">{pages.about.mission.heading}</h2>
               <p className="text-gray-300 leading-relaxed">
-                To help businesses generate quality leads, establish authoritative online presence, and build scalable customer acquisition engines that drive measurable commercial success.
+                {pages.about.mission.text}
               </p>
             </div>
 

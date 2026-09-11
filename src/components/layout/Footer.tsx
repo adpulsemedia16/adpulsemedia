@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/content/site";
 import { servicesData } from "@/content/services";
 import { Phone, Mail, MapPin, Clock, ArrowUpRight, Shield, Sparkles } from "lucide-react";
@@ -17,26 +18,14 @@ export const Footer: React.FC = () => {
           {/* Col 1 & 2: Agency Identity & Mission */}
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="inline-flex items-center gap-2 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-navy via-brand-plum to-brand-magenta flex items-center justify-center border border-white/20 shadow-brand-sm">
-                <svg
-                  className="w-6 h-6 text-brand-pink"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-2xl tracking-tight text-white leading-none">
-                  Ad<span className="text-brand-magenta">Pulse</span>
-                </span>
-                <span className="text-[11px] font-bold tracking-[0.25em] text-brand-pink uppercase leading-none mt-1">
-                  Media
-                </span>
+              <div className="w-12 h-12 flex items-center justify-center group-hover:scale-105 transition-transform">
+                <Image 
+                  src="/brand/adpulse-logo-square.png" 
+                  alt="AdPulse Media Logo" 
+                  width={48} 
+                  height={48} 
+                  className="w-full h-full object-contain drop-shadow-md"
+                />
               </div>
             </Link>
 

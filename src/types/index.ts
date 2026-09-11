@@ -98,3 +98,32 @@ export interface ContactFormData {
   message: string;
   honeypot?: string;
 }
+
+export interface PageContent {
+  home: {
+    hero: {
+      heading: string;
+      subheading: string;
+    };
+    about: {
+      heading: string;
+      text: string;
+    };
+  };
+  about: {
+    hero: {
+      heading: string;
+      subheading: string;
+    };
+    mission: {
+      heading: string;
+      text: string;
+    };
+  };
+  contact: {
+    hero: {
+      heading: string;
+      subheading: string;
+    };
+  };
+}

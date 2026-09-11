@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
@@ -16,6 +17,7 @@ import {
 
 const navItems = [
   { href: "/portal", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/portal/pages", label: "Pages Content", icon: FileText },
   { href: "/portal/settings", label: "Site Settings", icon: Settings },
   { href: "/portal/services", label: "Services", icon: Briefcase },
   { href: "/portal/portfolio", label: "Portfolio", icon: FolderGit2 },
@@ -32,16 +34,19 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <aside className="w-64 shrink-0 bg-[#130028] border-r border-white/8 flex flex-col">
         {/* Logo */}
         <div className="p-5 border-b border-white/8">
-          <Link href="/portal" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-magenta to-brand-pink flex items-center justify-center shadow-lg">
-              <Zap className="w-4 h-4 text-white fill-white/30" />
+          <Link href="/portal" className="flex items-center gap-3">
+            <div className="w-10 h-10 flex items-center justify-center">
+              <Image 
+                src="/brand/adpulse-logo-square.png" 
+                alt="AdPulse Media Logo" 
+                width={40} 
+                height={40} 
+                className="w-full h-full object-contain drop-shadow-md"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-base tracking-tight text-white leading-none">
-                Ad<span className="text-brand-magenta">Pulse</span>
-              </span>
-              <span className="text-[10px] font-bold tracking-[0.2em] text-brand-pink uppercase leading-none mt-0.5">
-                Admin
+                AdPulse Admin
               </span>
             </div>
           </Link>
