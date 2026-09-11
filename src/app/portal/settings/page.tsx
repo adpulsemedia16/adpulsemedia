@@ -9,7 +9,7 @@ export default function AdminSettings() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    fetch("/api/admin/content?resource=site.json")
+    fetch("/api/cms/content?resource=site.json")
       .then((res) => res.json())
       .then((data) => {
         setSiteConfig(data);
@@ -19,7 +19,7 @@ export default function AdminSettings() {
 
   const handleSave = async () => {
     setSaving(true);
-    await fetch("/api/admin/content", {
+    await fetch("/api/cms/content", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ resource: "site.json", data: siteConfig }),

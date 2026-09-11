@@ -16,7 +16,7 @@ import {
 
 const adminCards = [
   {
-    href: "/admin/settings",
+    href: "/portal/settings",
     icon: Settings,
     title: "Site Settings",
     description: "Manage contact info, business metrics, and global config.",
@@ -24,7 +24,7 @@ const adminCards = [
     iconColor: "text-purple-400",
   },
   {
-    href: "/admin/services",
+    href: "/portal/services",
     icon: Briefcase,
     title: "Services",
     description: "Add, edit, or remove service offerings and capabilities.",
@@ -32,7 +32,7 @@ const adminCards = [
     iconColor: "text-brand-pink",
   },
   {
-    href: "/admin/portfolio",
+    href: "/portal/portfolio",
     icon: FolderGit2,
     title: "Portfolio",
     description: "Manage case studies, project thumbnails, and results.",
@@ -40,7 +40,7 @@ const adminCards = [
     iconColor: "text-blue-400",
   },
   {
-    href: "/admin/blog",
+    href: "/portal/blog",
     icon: FileText,
     title: "Blog Posts",
     description: "Write, publish, and manage SEO-optimised articles.",
@@ -48,7 +48,7 @@ const adminCards = [
     iconColor: "text-green-400",
   },
   {
-    href: "/admin/faqs",
+    href: "/portal/faqs",
     icon: MessageSquare,
     title: "FAQs",
     description: "Edit frequently asked questions and their answers.",
@@ -143,7 +143,7 @@ export default function AdminDashboard() {
             ↗ View Live Site
           </Link>
           <Link
-            href="/api/admin/content?resource=site"
+            href="/api/cms/content?resource=site"
             target="_blank"
             className="text-xs font-semibold px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
           >

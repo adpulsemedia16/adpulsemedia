@@ -10,7 +10,7 @@ export default function AdminBlog() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    fetch("/api/admin/content?resource=blog.json")
+    fetch("/api/cms/content?resource=blog.json")
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
@@ -20,7 +20,7 @@ export default function AdminBlog() {
 
   const handleSave = async () => {
     setSaving(true);
-    await fetch("/api/admin/content", {
+    await fetch("/api/cms/content", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ resource: "blog.json", data: posts }),

@@ -15,12 +15,12 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
-  { href: "/admin/settings", label: "Site Settings", icon: Settings },
-  { href: "/admin/services", label: "Services", icon: Briefcase },
-  { href: "/admin/portfolio", label: "Portfolio", icon: FolderGit2 },
-  { href: "/admin/blog", label: "Blog Posts", icon: FileText },
-  { href: "/admin/faqs", label: "FAQs", icon: MessageSquare },
+  { href: "/portal", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/portal/settings", label: "Site Settings", icon: Settings },
+  { href: "/portal/services", label: "Services", icon: Briefcase },
+  { href: "/portal/portfolio", label: "Portfolio", icon: FolderGit2 },
+  { href: "/portal/blog", label: "Blog Posts", icon: FileText },
+  { href: "/portal/faqs", label: "FAQs", icon: MessageSquare },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -32,7 +32,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <aside className="w-64 shrink-0 bg-[#130028] border-r border-white/8 flex flex-col">
         {/* Logo */}
         <div className="p-5 border-b border-white/8">
-          <Link href="/admin" className="flex items-center gap-2.5">
+          <Link href="/portal" className="flex items-center gap-2.5">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-magenta to-brand-pink flex items-center justify-center shadow-lg">
               <Zap className="w-4 h-4 text-white fill-white/30" />
             </div>
@@ -101,11 +101,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <header className="h-14 border-b border-white/8 bg-[#0e001f] flex items-center px-6 shrink-0">
           <div className="flex items-center gap-2 text-xs text-gray-500">
             <span>Admin</span>
-            {pathname !== "/admin" && (
+            {pathname !== "/portal" && (
               <>
                 <span>/</span>
                 <span className="text-gray-300 capitalize">
-                  {pathname.split("/admin/")[1]?.split("/")[0] ?? ""}
+                  {pathname.split("/portal/")[1]?.split("/")[0] ?? ""}
                 </span>
               </>
             )}

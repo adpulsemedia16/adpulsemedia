@@ -10,7 +10,7 @@ export default function AdminFaqs() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    fetch("/api/admin/content?resource=faqs.json")
+    fetch("/api/cms/content?resource=faqs.json")
       .then((res) => res.json())
       .then((data) => {
         setFaqs(data);
@@ -20,7 +20,7 @@ export default function AdminFaqs() {
 
   const handleSave = async () => {
     setSaving(true);
-    await fetch("/api/admin/content", {
+    await fetch("/api/cms/content", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ resource: "faqs.json", data: faqs }),

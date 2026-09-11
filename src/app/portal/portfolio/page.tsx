@@ -52,7 +52,7 @@ function FileUpload({
       fd.append("bucket", "portfolio-media");
       fd.append("folder", folder);
 
-      const res = await fetch("/api/admin/upload", { method: "POST", body: fd });
+      const res = await fetch("/api/cms/upload", { method: "POST", body: fd });
       const json = await res.json();
 
       if (!res.ok || json.error) throw new Error(json.error || "Upload failed");
@@ -189,7 +189,7 @@ export default function AdminPortfolio() {
 
   // Load from Supabase via API
   useEffect(() => {
-    fetch("/api/admin/content?resource=portfolio")
+    fetch("/api/cms/content?resource=portfolio")
       .then((r) => r.json())
       .then((data) => {
         setProjects(Array.isArray(data) ? data : []);
@@ -205,7 +205,7 @@ export default function AdminPortfolio() {
   const handleSave = async () => {
     setSaving(true);
     try {
-      const res = await fetch("/api/admin/content", {
+      const res = await fetch("/api/cms/content", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ resource: "portfolio", data: projects }),
