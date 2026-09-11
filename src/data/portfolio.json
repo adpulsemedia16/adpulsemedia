@@ -1,59 +1,5 @@
 [
   {
-    "id": "luxury-villa-gated-community",
-    "title": "Luxury Villa Gated Community Campaign",
-    "client": "Premium Real Estate Developer, Hyderabad (Sample Showcase)",
-    "category": "real-estate",
-    "services": [
-      "Meta Lead Generation",
-      "Drone Videography",
-      "Landing Page"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&auto=format&fit=crop&q=80",
-    "videoUrl": null,
-    "shortDescription": "Full-funnel digital campaign targeting NRI & HNI homebuyers across Hyderabad with cinematic drone walkthroughs and targeted Instagram Instant Forms.",
-    "resultMetric": "420+ Leads",
-    "resultLabel": "CPL reduced by 34% (Verified Sample)",
-    "isPlaceholder": true,
-    "slug": "luxury-villa-campaign"
-  },
-  {
-    "id": "open-plots-venture",
-    "title": "Highway Open Plots Venture Launch",
-    "client": "Land Developers, Telangana (Sample Showcase)",
-    "category": "real-estate",
-    "services": [
-      "Google Ads",
-      "Meta Ads",
-      "Brochure Design"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80",
-    "videoUrl": null,
-    "shortDescription": "Geo-targeted Google search and social ad funnel for a 45-acre plotted development, generating high-intent site visit bookings.",
-    "resultMetric": "180+ Site Visits",
-    "resultLabel": "Within 45 days of launch",
-    "isPlaceholder": true,
-    "slug": "open-plots-venture"
-  },
-  {
-    "id": "construction-infra-corporate-site",
-    "title": "Commercial Construction & Infrastructure Portal",
-    "client": "EPC & Civil Construction Firm (Sample Showcase)",
-    "category": "websites",
-    "services": [
-      "Next.js Website",
-      "SEO Optimization",
-      "Corporate Video"
-    ],
-    "thumbnail": "https://qaaoncywyeyatakkoikn.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1789153015270-screenshot-2025-09-04-163045.png",
-    "videoUrl": null,
-    "shortDescription": "High-performance responsive portal showcasing completed commercial projects, equipment fleet, and tenders with zero layout shift.",
-    "resultMetric": "99 / 100",
-    "resultLabel": "Lighthouse Performance Score",
-    "isPlaceholder": true,
-    "slug": "construction-infra-portal"
-  },
-  {
     "id": "realty-brand-identity",
     "title": "Luxury Real Estate Identity & Collateral Suite",
     "client": "Boutique Realty Brand, Hyderabad (Sample Showcase)",
@@ -106,5 +52,59 @@
     "resultLabel": "Monthly booking run rate",
     "isPlaceholder": true,
     "slug": "healthcare-lead-engine"
+  },
+  {
+    "id": "luxury-villa-gated-community",
+    "title": "Luxury Villa Gated Community Campaign",
+    "client": "Premium Real Estate Developer, Hyderabad (Sample Showcase)",
+    "category": "real-estate",
+    "services": [
+      "Meta Lead Generation",
+      "Drone Videography",
+      "Landing Page"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&auto=format&fit=crop&q=80",
+    "videoUrl": null,
+    "shortDescription": "Full-funnel digital campaign targeting NRI & HNI homebuyers across Hyderabad with cinematic drone walkthroughs and targeted Instagram Instant Forms.",
+    "resultMetric": "420+ Leads",
+    "resultLabel": "CPL reduced by 34% (Verified Sample)",
+    "isPlaceholder": true,
+    "slug": "luxury-villa-campaign"
+  },
+  {
+    "id": "open-plots-venture",
+    "title": "Highway Open Plots Venture Launch",
+    "client": "Land Developers, Telangana (Sample Showcase)",
+    "category": "real-estate",
+    "services": [
+      "Google Ads",
+      "Meta Ads",
+      "Brochure Design"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80",
+    "videoUrl": null,
+    "shortDescription": "Geo-targeted Google search and social ad funnel for a 45-acre plotted development, generating high-intent site visit bookings.",
+    "resultMetric": "180+ Site Visits",
+    "resultLabel": "Within 45 days of launch",
+    "isPlaceholder": true,
+    "slug": "open-plots-venture"
+  },
+  {
+    "id": "construction-infra-corporate-site",
+    "title": "Commercial Construction & Infrastructure Portal",
+    "client": "EPC & Civil Construction Firm (Sample Showcase)",
+    "category": "websites",
+    "services": [
+      "Next.js Website",
+      "SEO Optimization",
+      "Corporate Video"
+    ],
+    "thumbnail": "https://qaaoncywyeyatakkoikn.supabase.co/storage/v1/object/public/portfolio-media/thumbnails/1789153015270-screenshot-2025-09-04-163045.png",
+    "videoUrl": null,
+    "shortDescription": "High-performance responsive portal showcasing completed commercial projects, equipment fleet, and tenders with zero layout shift.",
+    "resultMetric": "99 / 100",
+    "resultLabel": "Lighthouse Performance Score",
+    "isPlaceholder": true,
+    "slug": "construction-infra-portal"
   }
 ]

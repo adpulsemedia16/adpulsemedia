@@ -19,7 +19,8 @@ export async function GET(request: Request) {
       return NextResponse.json({
         siteConfig: data.site_config,
         businessMetrics: data.business_metrics,
-        industries: data.industries
+        industries: data.industries,
+        pages: data.pages
       });
     }
 
@@ -64,6 +65,7 @@ export async function POST(request: Request) {
         site_config: data.siteConfig,
         business_metrics: data.businessMetrics,
         industries: data.industries,
+        pages: data.pages,
       });
       if (error) throw error;
     } else {

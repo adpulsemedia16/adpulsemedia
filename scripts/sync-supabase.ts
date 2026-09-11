@@ -54,9 +54,10 @@ async function sync() {
         siteConfig: siteRes.data.site_config || {},
         businessMetrics: siteRes.data.business_metrics || [],
         industries: siteRes.data.industries || [],
+        pages: siteRes.data.pages || {},
       };
       writeJson("site.json", siteJson);
-      console.log("  ✓ Synced site.json");
+      console.log("  ✅ Synced site.json");
     }
 
     // 2. Services

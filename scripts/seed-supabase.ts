@@ -41,6 +41,7 @@ async function seed() {
       site_config: siteData.siteConfig || {},
       business_metrics: siteData.businessMetrics || [],
       industries: siteData.industries || [],
+      pages: siteData.pages || {},
     });
     if (error) console.error("Error seeding site_config:", error.message);
     else console.log("✅ Seeded site_config");
